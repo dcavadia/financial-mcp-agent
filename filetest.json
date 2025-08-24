@@ -1,0 +1,55 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "E:\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\Daniel\\AppData\\Roaming\\npm\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "E:\\RAGDocuments"
+      ]
+    },
+    "codesnip": {
+      "command": "E:\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\Daniel\\AppData\\Roaming\\npm\\node_modules\\@patruff\\server-codesnip\\dist\\index.js"
+      ]
+    },
+    "memory": {
+      "command": "E:\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\Daniel\\AppData\\Roaming\\npm\\node_modules\\@modelcontextprotocol\\server-memory\\dist\\index.js"
+      ]
+    },
+    "lightrag": {
+      "command": "E:\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\Daniel\\AppData\\Roaming\\npm\\node_modules\\@patruff\\server-lightrag\\dist\\index.js"
+      ],
+      "env": {
+        "LIGHTRAG_API_URL": "http://127.0.0.1:8020"
+      }
+    },
+    "perplexity-ask": {
+      "command": "npx",
+      "args": [
+        "C:\\Users\\Daniel\\AppData\\Roaming\\npm\\node_modules\\@modelcontextprotocol\\server-perplexity-ask"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "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"
+      }
+    },
+    "optionsflow": {
+      "command": "python",
+      "args": [ "E:\\mcp-optionsflow\\optionsflow.py" ]
+    },
+    "slack": {
+      "command": "npx",
+      "args": [
+        "C:\\Users\\Daniel\\AppData\\Roaming\\npm\\node_modules\\@modelcontextprotocol\\server-slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-8654120518865-8645849472306-V0XenstS4DABWKVUdky7yd6g",
+        "SLACK_TEAM_ID": "T08K83JF8RF"
+      }
+    }
+  }
+}

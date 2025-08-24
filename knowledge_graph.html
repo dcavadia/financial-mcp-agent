@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 100vh;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#f49c3f", "description": "The Trump administration is a political entity that has influenced trade and commodity markets.", "entity_id": "Trump Administration", "entity_type": "organization", "file_path": "unknown_source", "id": "Trump Administration", "label": "Trump Administration", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "The Trump administration is a political entity that has influenced trade and commodity markets."}, {"color": "#1453a2", "description": "Canada\u2019s election campaign focuses on U.S. relations, creating trade tensions affecting commodities.", "entity_id": "Canada", "entity_type": "geo", "file_path": "unknown_source", "id": "Canada", "label": "Canada", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Canada\u2019s election campaign focuses on U.S. relations, creating trade tensions affecting commodities."}, {"color": "#1607ff", "description": "Wheat faces challenges from U.S.-Canada trade issues.", "entity_id": "U.S. Wheat", "entity_type": "category", "file_path": "unknown_source", "id": "U.S. Wheat", "label": "U.S. Wheat", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Wheat faces challenges from U.S.-Canada trade issues."}, {"color": "#d58bb6", "description": "trade impact, commodity sensitivity", "entity_id": "U.S. Wheat faces challenges from U.S.-Canada trade issues.", "entity_type": "UNKNOWN", "file_path": "unknown_source", "id": "U.S. Wheat faces challenges from U.S.-Canada trade issues.", "label": "U.S. Wheat faces challenges from U.S.-Canada trade issues.", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "trade impact, commodity sensitivity"}, {"color": "#1e7da2", "description": "Corn production is affected by drought conditions in the U.S. Midwest.", "entity_id": "U.S. Corn", "entity_type": "category", "file_path": "unknown_source", "id": "U.S. Corn", "label": "U.S. Corn", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Corn production is affected by drought conditions in the U.S. Midwest."}, {"color": "#9f8b90", "description": "agriculture challenges, regional impact", "entity_id": "U.S. Corn production is affected by drought conditions in the U.S. Midwest.", "entity_type": "UNKNOWN", "file_path": "unknown_source", "id": "U.S. Corn production is affected by drought conditions in the U.S. Midwest.", "label": "U.S. Corn production is affected by drought conditions in the U.S. Midwest.", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "agriculture challenges, regional impact"}, {"color": "#a80486", "description": "Oil markets are responding to decreased global demand from trade tensions.", "entity_id": "Global Oil", "entity_type": "category", "file_path": "unknown_source", "id": "Global Oil", "label": "Global Oil", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Oil markets are responding to decreased global demand from trade tensions."}, {"color": "#fdc82c", "description": "market reaction, commodity dynamics", "entity_id": "Global Oil responds to decreased global demand from trade tensions.", "entity_type": "UNKNOWN", "file_path": "unknown_source", "id": "Global Oil responds to decreased global demand from trade tensions.", "label": "Global Oil responds to decreased global demand from trade tensions.", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "market reaction, commodity dynamics"}, {"color": "#205021", "description": "Extreme weather events threaten crop yields and diversity.\u003cSEP\u003eExtreme weather events, including droughts, heatwaves, and storms, are threatening crop yields and diversity.", "entity_id": "Extreme Weather", "entity_type": "climate change", "file_path": "unknown_source", "id": "Extreme Weather", "label": "Extreme Weather", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Extreme weather events threaten crop yields and diversity.\u003cSEP\u003eExtreme weather events, including droughts, heatwaves, and storms, are threatening crop yields and diversity."}, {"color": "#4058da", "description": "impact, agricultural challenges", "entity_id": "Extreme weather events threaten crop yields and diversity.", "entity_type": "UNKNOWN", "file_path": "unknown_source", "id": "Extreme weather events threaten crop yields and diversity.", "label": "Extreme weather events threaten crop yields and diversity.", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "impact, agricultural challenges"}, {"color": "#ccdda3", "description": "Long-term, ongoing climate change and trade disputes are shaping the landscape for wheat, corn, and oil.", "entity_id": "Climate Change", "entity_type": "Climate change", "file_path": "unknown_source", "id": "Climate Change", "label": "Climate Change", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Long-term, ongoing climate change and trade disputes are shaping the landscape for wheat, corn, and oil."}, {"color": "#427f36", "description": "environmental impact, market volatility", "entity_id": "Long-term, ongoing climate change and trade disputes affect commodity prices and yields.", "entity_type": "UNKNOWN", "file_path": "unknown_source", "id": "Long-term, ongoing climate change and trade disputes affect commodity prices and yields.", "label": "Long-term, ongoing climate change and trade disputes affect commodity prices and yields.", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "environmental impact, market volatility"}, {"color": "#1b877c", "description": "policy effects, economic strategy", "entity_id": "Political Decisions", "entity_type": "UNKNOWN", "file_path": "unknown_source", "id": "Political Decisions", "label": "Political Decisions", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "policy effects, economic strategy"}, {"color": "#e5860d", "description": "policy effects, economic strategy", "entity_id": "Political decisions influence the interaction between commodity markets and regional issues.", "entity_type": "UNKNOWN", "file_path": "unknown_source", "id": "Political decisions influence the interaction between commodity markets and regional issues.", "label": "Political decisions influence the interaction between commodity markets and regional issues.", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "policy effects, economic strategy"}, {"color": "#25da9a", "description": "The World Athletics Championship is a global sports competition featuring top athletes in track and field.", "entity_id": "World Athletics Championship", "entity_type": "event", "file_path": "unknown_source", "id": "World Athletics Championship", "label": "World Athletics Championship", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "The World Athletics Championship is a global sports competition featuring top athletes in track and field."}, {"color": "#65e5c3", "description": "Tokyo is the host city of the World Athletics Championship.", "entity_id": "Tokyo", "entity_type": "location", "file_path": "unknown_source", "id": "Tokyo", "label": "Tokyo", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Tokyo is the host city of the World Athletics Championship."}, {"color": "#8819c6", "description": "Noah Carter is a sprinter who set a new record in the 100m sprint at the World Athletics Championship.", "entity_id": "Noah Carter", "entity_type": "athlete", "file_path": "unknown_source", "id": "Noah Carter", "label": "Noah Carter", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Noah Carter is a sprinter who set a new record in the 100m sprint at the World Athletics Championship."}, {"color": "#79900e", "description": "The 100m sprint record is a benchmark in athletics, recently broken by Noah Carter.", "entity_id": "100m Sprint Record", "entity_type": "record", "file_path": "unknown_source", "id": "100m Sprint Record", "label": "100m Sprint Record", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "The 100m sprint record is a benchmark in athletics, recently broken by Noah Carter."}, {"color": "#67e99a", "description": "Carbon-fiber spikes provide enhanced speed and traction for sprinting.", "entity_id": "Carbon-Fiber Spikes", "entity_type": "equipment", "file_path": "unknown_source", "id": "Carbon-Fiber Spikes", "label": "Carbon-Fiber Spikes", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Carbon-fiber spikes provide enhanced speed and traction for sprinting."}, {"color": "#69e6d6", "description": "Wheat faces challenges from U.S.-Canada trade issues.", "entity_id": "Wheat", "entity_type": "category", "file_path": "unknown_source", "id": "Wheat", "label": "Wheat", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Wheat faces challenges from U.S.-Canada trade issues."}, {"color": "#450a6d", "description": "Corn production is affected by drought conditions in the U.S. Midwest.", "entity_id": "Corn", "entity_type": "category", "file_path": "unknown_source", "id": "Corn", "label": "Corn", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Corn production is affected by drought conditions in the U.S. Midwest."}, {"color": "#d701cd", "description": "Oil markets are responding to decreased global demand from trade tensions.", "entity_id": "Oil", "entity_type": "category", "file_path": "unknown_source", "id": "Oil", "label": "Oil", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Oil markets are responding to decreased global demand from trade tensions."}, {"color": "#9d534b", "description": "The interplay between political decisions and climate-related incidents is creating a complex environment for commodity markets.", "entity_id": "Agriculture", "entity_type": "Agriculture challenges,\"\"regional impact,\"\"supply chain disruptions", "file_path": "unknown_source", "id": "Agriculture", "label": "Agriculture", "shape": "dot", "size": 10, "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "The interplay between political decisions and climate-related incidents is creating a complex environment for commodity markets."}]);
+                  edges = new vis.DataSet([{"description": "The Trump administration\u0027s new tariffs on Canada has created trade tensions affecting commodities.", "file_path": "unknown_source", "from": "Trump Administration", "keywords": "trade impacts, economic policy", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "The Trump administration\u0027s new tariffs on Canada has created trade tensions affecting commodities.", "to": "Canada", "width": 7.0}, {"description": "Canada\u0027s election campaign focuses on U.S. relations, creating trade tensions affecting commodities.", "file_path": "unknown_source", "from": "Canada", "keywords": "trade influences, U.S. commodities", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "Canada\u0027s election campaign focuses on U.S. relations, creating trade tensions affecting commodities.", "to": "U.S. Wheat", "width": 8.0}, {"description": "trade impact, commodity sensitivity", "file_path": "unknown_source", "from": "U.S. Wheat", "keywords": "9", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "trade impact, commodity sensitivity", "to": "U.S. Wheat faces challenges from U.S.-Canada trade issues.", "width": 9.0}, {"description": "agriculture challenges, regional impact", "file_path": "unknown_source", "from": "U.S. Corn", "keywords": "10", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "agriculture challenges, regional impact", "to": "U.S. Corn production is affected by drought conditions in the U.S. Midwest.", "width": 10.0}, {"description": "market reaction, commodity dynamics", "file_path": "unknown_source", "from": "Global Oil", "keywords": "7", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "market reaction, commodity dynamics", "to": "Global Oil responds to decreased global demand from trade tensions.", "width": 7.0}, {"description": "impact, agricultural challenges", "file_path": "unknown_source", "from": "Extreme Weather", "keywords": "9", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "impact, agricultural challenges", "to": "Extreme weather events threaten crop yields and diversity.", "width": 9.0}, {"description": "environmental impact, market volatility", "file_path": "unknown_source", "from": "Climate Change", "keywords": "7", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "environmental impact, market volatility", "to": "Long-term, ongoing climate change and trade disputes affect commodity prices and yields.", "width": 7.0}, {"description": "policy effects, economic strategy", "file_path": "unknown_source", "from": "Political Decisions", "keywords": "10", "source_id": "chunk-61a4d8bcfcb0e781b210e7aacc0446d9", "title": "policy effects, economic strategy", "to": "Political decisions influence the interaction between commodity markets and regional issues.", "width": 10.0}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

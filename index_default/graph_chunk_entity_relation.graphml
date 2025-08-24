@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d9" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d8" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d7" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d6" for="edge" attr.name="description" attr.type="string"/>
+<key id="d5" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Trump Administration">
+  <data key="d0">Trump Administration</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Trump administration is a political entity that has influenced trade and commodity markets.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Canada">
+  <data key="d0">Canada</data>
+  <data key="d1">geo</data>
+  <data key="d2">Canada’s election campaign focuses on U.S. relations, creating trade tensions affecting commodities.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="U.S. Wheat">
+  <data key="d0">U.S. Wheat</data>
+  <data key="d1">category</data>
+  <data key="d2">Wheat faces challenges from U.S.-Canada trade issues.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="U.S. Corn">
+  <data key="d0">U.S. Corn</data>
+  <data key="d1">category</data>
+  <data key="d2">Corn production is affected by drought conditions in the U.S. Midwest.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Global Oil">
+  <data key="d0">Global Oil</data>
+  <data key="d1">category</data>
+  <data key="d2">Oil markets are responding to decreased global demand from trade tensions.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Extreme Weather">
+  <data key="d0">Extreme Weather</data>
+  <data key="d1">climate change</data>
+  <data key="d2">Extreme weather events threaten crop yields and diversity.&lt;SEP&gt;Extreme weather events, including droughts, heatwaves, and storms, are threatening crop yields and diversity.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Climate Change">
+  <data key="d0">Climate Change</data>
+  <data key="d1">Climate change</data>
+  <data key="d2">Long-term, ongoing climate change and trade disputes are shaping the landscape for wheat, corn, and oil.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="World Athletics Championship">
+  <data key="d0">World Athletics Championship</data>
+  <data key="d1">event</data>
+  <data key="d2">The World Athletics Championship is a global sports competition featuring top athletes in track and field.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Tokyo">
+  <data key="d0">Tokyo</data>
+  <data key="d1">location</data>
+  <data key="d2">Tokyo is the host city of the World Athletics Championship.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Noah Carter">
+  <data key="d0">Noah Carter</data>
+  <data key="d1">athlete</data>
+  <data key="d2">Noah Carter is a sprinter who set a new record in the 100m sprint at the World Athletics Championship.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="100m Sprint Record">
+  <data key="d0">100m Sprint Record</data>
+  <data key="d1">record</data>
+  <data key="d2">The 100m sprint record is a benchmark in athletics, recently broken by Noah Carter.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Carbon-Fiber Spikes">
+  <data key="d0">Carbon-Fiber Spikes</data>
+  <data key="d1">equipment</data>
+  <data key="d2">Carbon-fiber spikes provide enhanced speed and traction for sprinting.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Wheat">
+  <data key="d0">Wheat</data>
+  <data key="d1">category</data>
+  <data key="d2">Wheat faces challenges from U.S.-Canada trade issues.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Corn">
+  <data key="d0">Corn</data>
+  <data key="d1">category</data>
+  <data key="d2">Corn production is affected by drought conditions in the U.S. Midwest.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Oil">
+  <data key="d0">Oil</data>
+  <data key="d1">category</data>
+  <data key="d2">Oil markets are responding to decreased global demand from trade tensions.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Agriculture">
+  <data key="d0">Agriculture</data>
+  <data key="d1">Agriculture challenges,""regional impact,""supply chain disruptions</data>
+  <data key="d2">The interplay between political decisions and climate-related incidents is creating a complex environment for commodity markets.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="U.S. Wheat faces challenges from U.S.-Canada trade issues.">
+  <data key="d0">U.S. Wheat faces challenges from U.S.-Canada trade issues.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d2">trade impact, commodity sensitivity</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="U.S. Corn production is affected by drought conditions in the U.S. Midwest.">
+  <data key="d0">U.S. Corn production is affected by drought conditions in the U.S. Midwest.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d2">agriculture challenges, regional impact</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Global Oil responds to decreased global demand from trade tensions.">
+  <data key="d0">Global Oil responds to decreased global demand from trade tensions.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d2">market reaction, commodity dynamics</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Extreme weather events threaten crop yields and diversity.">
+  <data key="d0">Extreme weather events threaten crop yields and diversity.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d2">impact, agricultural challenges</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Political Decisions">
+  <data key="d0">Political Decisions</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d2">policy effects, economic strategy</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Political decisions influence the interaction between commodity markets and regional issues.">
+  <data key="d0">Political decisions influence the interaction between commodity markets and regional issues.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d2">policy effects, economic strategy</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+</node>
+<node id="Long-term, ongoing climate change and trade disputes affect commodity prices and yields.">
+  <data key="d0">Long-term, ongoing climate change and trade disputes affect commodity prices and yields.</data>
+  <data key="d3">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d2">environmental impact, market volatility</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+</node>
+<edge source="Trump Administration" target="Canada">
+  <data key="d5">7.0</data>
+  <data key="d6">The Trump administration's new tariffs on Canada has created trade tensions affecting commodities.</data>
+  <data key="d7">trade impacts, economic policy</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+<edge source="Canada" target="U.S. Wheat">
+  <data key="d5">8.0</data>
+  <data key="d6">Canada's election campaign focuses on U.S. relations, creating trade tensions affecting commodities.</data>
+  <data key="d7">trade influences, U.S. commodities</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+<edge source="U.S. Wheat" target="U.S. Wheat faces challenges from U.S.-Canada trade issues.">
+  <data key="d5">9.0</data>
+  <data key="d6">trade impact, commodity sensitivity</data>
+  <data key="d7">9</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+<edge source="U.S. Corn" target="U.S. Corn production is affected by drought conditions in the U.S. Midwest.">
+  <data key="d5">10.0</data>
+  <data key="d6">agriculture challenges, regional impact</data>
+  <data key="d7">10</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+<edge source="Global Oil" target="Global Oil responds to decreased global demand from trade tensions.">
+  <data key="d5">7.0</data>
+  <data key="d6">market reaction, commodity dynamics</data>
+  <data key="d7">7</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+<edge source="Extreme Weather" target="Extreme weather events threaten crop yields and diversity.">
+  <data key="d5">9.0</data>
+  <data key="d6">impact, agricultural challenges</data>
+  <data key="d7">9</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+<edge source="Climate Change" target="Long-term, ongoing climate change and trade disputes affect commodity prices and yields.">
+  <data key="d5">7.0</data>
+  <data key="d6">environmental impact, market volatility</data>
+  <data key="d7">7</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+<edge source="Political Decisions" target="Political decisions influence the interaction between commodity markets and regional issues.">
+  <data key="d5">10.0</data>
+  <data key="d6">policy effects, economic strategy</data>
+  <data key="d7">10</data>
+  <data key="d8">chunk-61a4d8bcfcb0e781b210e7aacc0446d9</data>
+  <data key="d9">unknown_source</data>
+</edge>
+</graph></graphml>
