@@ -29,6 +29,16 @@
 
 The **Financial MCP Agent** is a modular AI agent system for real-time market research, analysis, and workflow automation. It uses an AI Agent as the decision-making core and an MCP Client to coordinate specialized MCP servers, enabling capabilities like options data retrieval and operations, lightweight RAG, filesystem actions, Slack interactions, and web search. Users can submit financial queries or tasks—such as options flow insights, strategy screening, or report generation—and the agent orchestrates the right MCP servers to produce actionable results.
 
+<!-- Thumbnails rendered at same width -->
+<img src="./inference_example_image.png" alt="Inference Preview" width="720" />
+
+> This preview is generated from the latest inference.
+
+<img src="./knowledge_graph_image.png" alt="Knowledge Graph Preview" width="720" />
+
+> This preview is generated from the latest GraphRAG build (knowledge_graph.html).
+
+
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
