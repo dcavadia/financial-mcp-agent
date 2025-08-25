@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [🧠 Financial MCP Agent](#-financial-mcp-agent-)
+- [🧠 Multi-Agent Financial System](#-multi-agent-financial-system-)
   - [📑 Table of Contents](#-table-of-contents)
   - [🌟 Overview](#-overview)
   - [🚀 Getting Started](#-getting-started)
@@ -27,7 +27,7 @@
 
 ## 🌟 Overview
 
-The **Financial MCP Agent** is a modular AI system for real-time market research, analysis, and automation. It pairs an AI Agent core with an MCP client to orchestrate specialized servers—options data/ops, lightweight RAG, filesystem, Slack, and web search—so each task hits the right capability. The advantage of combining them is amplified by a knowledge graph: relationships in Graph RAG resolve entities, traverse linked evidence, and surface causal chains, yielding tighter signal fusion, fewer hallucinations, and faster, more defensible decisions.
+The **Multi-Agent Financial System** is a modular AI system for real-time market research, analysis, and automation. It pairs an AI Agent core with an MCP client to orchestrate specialized servers—options data/ops, lightweight RAG, filesystem, Slack, and web search—so each task hits the right capability. The advantage of combining them is amplified by a knowledge graph: relationships in Graph RAG resolve entities, traverse linked evidence, and surface causal chains, yielding tighter signal fusion, fewer hallucinations, and faster, more defensible decisions.
 
 <!-- Thumbnails rendered at same width -->
 <img src="./examples/inference_example_image.png" alt="Inference Preview" width="560" />
