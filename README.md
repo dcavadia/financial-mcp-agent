@@ -27,16 +27,21 @@
 
 ## 🌟 Overview
 
-The **Financial MCP Agent** is a modular AI agent system for real-time market research, analysis, and workflow automation. It uses an AI Agent as the decision-making core and an MCP Client to coordinate specialized MCP servers, enabling capabilities like options data retrieval and operations, lightweight RAG, filesystem actions, Slack interactions, and web search. Users can submit financial queries or tasks—such as options flow insights, strategy screening, or report generation—and the agent orchestrates the right MCP servers to produce actionable results.
+The **Financial MCP Agent** is a modular AI system for real-time market research, analysis, and automation. It pairs an AI Agent core with an MCP client to orchestrate specialized servers—options data/ops, lightweight RAG, filesystem, Slack, and web search—so each task hits the right capability. The advantage of combining them is amplified by a knowledge graph: relationships in Graph RAG resolve entities, traverse linked evidence, and surface causal chains, yielding tighter signal fusion, fewer hallucinations, and faster, more defensible decisions.
 
 <!-- Thumbnails rendered at same width -->
-<img src="./inference_example_image.png" alt="Inference Preview" width="720" />
+<img src="./examples/inference_example_image.png" alt="Inference Preview" width="560" />
 
 > This preview is generated from the latest inference.
 
-<img src="./knowledge_graph_image.png" alt="Knowledge Graph Preview" width="720" />
+<img src="./examples/knowledge_graph_image.png" alt="Knowledge Graph Preview" width="560" />
 
-> This preview is generated from the latest GraphRAG build (knowledge_graph.html).
+> This preview is generated from the latest GraphRAG build.
+
+<img src="./examples/slack_communication_image.png" alt="Slack Communication preview" width="560" />
+
+> This preview is generated from the latest inference.
+
 
 
 ## 🚀 Getting Started
