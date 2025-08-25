@@ -1,4 +1,4 @@
-# 🧠 Multi-Agent Financial System
+# 🧠 Graph‑Driven Quant Agents
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -13,7 +13,7 @@
 
 ## 📑 Table of Contents
 
-- [🧠 Multi-Agent Financial System](#-multi-agent-financial-system-)
+- [🧠 Graph‑Driven Quant Agents](#-graph-driven-quant-agents-)
   - [📑 Table of Contents](#-table-of-contents)
   - [🌟 Overview](#-overview)
   - [🚀 Getting Started](#-getting-started)
@@ -27,7 +27,7 @@
 
 ## 🌟 Overview
 
-The **Multi-Agent Financial System** is a modular AI system for real-time market research, analysis, and automation. It pairs an AI Agent core with an MCP client to orchestrate specialized servers—options data/ops, lightweight RAG, filesystem, Slack, and web search—so each task hits the right capability. The advantage of combining them is amplified by a knowledge graph: relationships in Graph RAG resolve entities, traverse linked evidence, and surface causal chains, yielding tighter signal fusion, fewer hallucinations, and faster, more defensible decisions.
+The **Graph‑Driven Quant Agents** is a modular AI system for real-time market research, analysis, and automation. It pairs an AI Agent core with an MCP client to orchestrate specialized servers—options data/ops, lightweight RAG, filesystem, Slack, and web search—so each task hits the right capability. The advantage of combining them is amplified by a knowledge graph: relationships in Graph RAG resolve entities, traverse linked evidence, and surface causal chains, yielding tighter signal fusion, fewer hallucinations, and faster, more defensible decisions.
 
 <!-- Thumbnails rendered at same width -->
 <img src="./examples/inference_example_image.png" alt="Inference Preview" width="560" />
