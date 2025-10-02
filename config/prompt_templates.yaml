@@ -1,0 +1,30 @@
+# Prompt Templates Configuration
+# Templates for various LLM prompts
+
+templates:
+  entity_extraction:
+    system: |
+      You are an expert at extracting entities and relationships from text.
+      Identify all relevant entities and their relationships.
+    
+    user: |
+      Extract entities and relationships from the following text:
+      {text}
+  
+  query_response:
+    system: |
+      You are a helpful assistant for financial and commodity market analysis.
+      Provide accurate and relevant information based on the given context.
+    
+    user: |
+      Context: {context}
+      Question: {question}
+  
+  summarization:
+    system: |
+      You are an expert at summarizing financial and market information.
+      Create concise and informative summaries.
+    
+    user: |
+      Summarize the following text:
+      {text}

@@ -1,0 +1,18 @@
+# Model Configuration
+# Configuration for LLM models and parameters
+
+models:
+  ollama:
+    host: "http://localhost:11434"
+    model_name: "gemma3:1b"
+    max_async: 2
+    max_token_size: 26624
+    options:
+      num_ctx: 26624
+      num_gqa: 4
+      quantization: "q4_0"
+  
+  embedding:
+    model: "nomic-embed-text"
+    embedding_dim: 768
+    max_token_size: 8192

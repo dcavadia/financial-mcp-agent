@@ -1,0 +1,29 @@
+# Core dependencies
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.5.0
+aiofiles>=23.2.0
+nest-asyncio>=1.5.8
+
+# LightRAG and RAG dependencies
+lightrag>=0.0.1
+
+# Ollama integration
+ollama>=0.1.7
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+plotly>=5.17.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Development
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.7.0
